@@ -57,22 +57,21 @@ app.use(cors());
 app.get("/", (req, resp) => {
 
 	resp.send("App is Working");
-	// You can check backend is working or not by 
-	// entering http://loacalhost:5000
-	
-	// If you see App is working means
-	// backend working properly
 });
 
 app.get("/users", async (req, resp) => {
     let name =[];
 	try {
-        const users = await User.find({"studentname":"Uvan Shankar"});
-		for(let i=0;i<users.length;i++){
-        	name.push(users[i].studentname);
-			name.push(users[i].CGPA);
-		}
-		resp.send(name);
+		// resp.send("hi i am working")
+        const users = await User.find({placement:1}).count();
+		// const users = await User.find({}).count();
+		const users2 = await User.find({CGPA:{$gt:7.41}}).count();
+		// const users = await User.find({placement:1}).count();
+		// const users = await User.find({placement:1}).count();
+		// const users = await User.find({placement:1}).count();
+		console.log(users);
+		console.log(users2);
+		resp.send({count:users,count2:users2});
     } catch (error) {
         resp.status(500).json({ error: "Internal Server Error" });
     }
