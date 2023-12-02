@@ -21,5 +21,4 @@ function App() {
 
   return (<table><tr><th>Eligible</th></tr><tr><td>{users.count}</td></tr></table>);
 }
-
 export default App;
