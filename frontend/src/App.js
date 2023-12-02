@@ -1,24 +1,9 @@
-import './App.css';
-import React, { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from "./Dashboard";
+import Update from './update';
 
 function App() {
-  const [users, setUsers] = useState([])
-  
-  const fetchUserData = () => {
-    fetch("http://localhost:5000/users")
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setUsers(data)
-      })
-  }
-
-  useEffect(() => {
-    fetchUserData()
-  }, [])
-
-
-  return (<table><tr><th>Eligible</th></tr><tr><td>{users.count}</td></tr></table>);
+  // return (<Dashboard/>)
+  return (<Update/>)
 }
 export default App;
