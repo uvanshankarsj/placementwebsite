@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const cors= require('cors');
 mongoose.connect('mongodb://localhost:27017/', {
 	dbName: 'testing',
 	useNewUrlParser: true,
@@ -54,23 +55,18 @@ const express = require('express');
 const app = express();
 console.log("App listen at port 5000");
 app.use(express.json());
+app.use(cors())
 app.get("/", (req, resp) => {
-
 	resp.send("App is Working");
 });
 
 app.get("/users", async (req, resp) => {
     try {
-		// resp.send("hi i am working")
         const appearplacement = await User.find({placement:1}).count();
 		const totaluser = await User.find().count();
 		const eligible= await User.find({CGPA:{$gt:6}}).count();
 		const placed= await User.find({status:"placed"}).count();
 		const Intern = await User.find({type:"Internship"}).count();
-		// const users = await User.find({placement:1}).count();
-		// console.log(users);
-		// console.log(users2);
-		console.log(placed);
 		resp.send({result1:totaluser,result2:appearplacement,result3:eligible,result4:placed,result5:Intern});
     } catch (error) {
         resp.status(500).json({ error: "Internal Server Error" });
@@ -78,8 +74,14 @@ app.get("/users", async (req, resp) => {
 });
 
 app.get("/login", async (req, resp) => {
-	const studentname = await User.find({},{studentname:1});
-	resp.send(studentname);
+	try {
+	const studentname = await User.find({},{studentname:1,'_id':0});
+	console.log(studentname);
+	resp.send({stu:studentname});
+}
+catch(error) {
+	resp.status(500).json({ error: "Internal Server Error" });
+}
 });
 
 app.get("/update",async (req, resp) => {

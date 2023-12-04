@@ -1,15 +1,6 @@
-import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Update() {
-    fetch("http://localhost:5000/users")
-    .then(response => {
-    return response.json()
-    })
-    .then(data => {
-    setUsers(data)
-    })
-    }
     return (<div>
         <form method="get" action="http://localhost:5000/update" >
             <select name="name">
