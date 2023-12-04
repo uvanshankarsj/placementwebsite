@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
-	placed: {
+	status: {
 		type: String,
 		required: true,
 	},
@@ -85,9 +85,9 @@ catch(error) {
 });
 
 app.get("/update",async (req, resp) => {
-	console.log(req.query.name,req.query.cgpa);
-	const checking=await User.updateOne({ studentname: req.query.name }, { $set: { CGPA: req.query.cgpa} });
-	// console.log(checking);
+	console.log(req.query.name,req.query.status,req.query.type,req.query.company);
+	const checking=await User.updateOne({ studentname: req.query.name }, { $set: { status:req.query.status,type:req.query.type,company:req.query.company} });
+	console.log(checking);
 	resp.send("updated");
 }); 
 

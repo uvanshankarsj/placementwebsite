@@ -18,11 +18,13 @@ function Dashboard() {
     fetchUserData()
   }, [])
 
+
+
   console.log(users.result1)
   return (
-    <div>
+    <div style={{ paddingTop: "2%", backgroundColor: "whitesmoke", height: "auto" }}>
       <div class="container" style={{ textAlign: 'center', padding: "2%", backgroundColor: 'black' }}>
-        <div class="row" style={{ backgroundColor: "white", padding: "10px" }}>
+        <div class="row" style={{ backgroundColor: "whitesmoke", padding: "10px" }}>
           <div class="col" style={{ padding: "1%", backgroundColor: "rgb(140, 232, 237)" }}>Total strength</div>
           <div class="w-100"></div>
           <div class="col" style={{ padding: "2%", }}>{users.result1}</div>
@@ -56,7 +58,8 @@ function Dashboard() {
           <div class="col" style={{ padding: "2%", }}>{users.result2 - users.result3}</div>
         </div>
       </div>
-    </div>);
+    </div>
+  );
 }
 
 export default Dashboard
