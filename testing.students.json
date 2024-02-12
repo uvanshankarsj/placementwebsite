@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "6560aca2bf4fe00074293742"
+  },
+  "studentname": "Uvan Shankar",
+  "CGPA": 7.41,
+  "arrear": 0,
+  "placement": 1,
+  "status": "placed",
+  "type": "internship",
+  "company": "ICU medical",
+  "CTC": 9
+},
+{
+  "_id": {
+    "$oid": "6560ace558aca44a322036b2"
+  },
+  "studentname": "sanjay",
+  "CGPA": 3,
+  "arrear": 0,
+  "placement": 1,
+  "status": "not placed",
+  "type": "internship",
+  "company": "google",
+  "CTC": 11
+},
+{
+  "_id": {
+    "$oid": "65630b4570bf18ea5fe20e43"
+  },
+  "studentname": "Uvan Shankar",
+  "CGPA": 7.41,
+  "arrear": 0,
+  "placement": 1,
+  "type": "Internship",
+  "company": "ICU medical",
+  "salary": 9,
+  "__v": 0,
+  "status": "placed"
+},
+{
+  "_id": {
+    "$oid": "65630c6b70bf18ea5fe20e46"
+  },
+  "studentname": "Uvan Shankar",
+  "CGPA": 7.41,
+  "arrear": 0,
+  "placement": 1,
+  "type": "Internship",
+  "company": "ICU medical",
+  "salary": 9,
+  "__v": 0,
+  "status": "not placed"
+},
+{
+  "_id": {
+    "$oid": "65630cb6bb406fa982424d67"
+  },
+  "studentname": "Uvan Shankar",
+  "CGPA": 7.41,
+  "arrear": 0,
+  "placement": 1,
+  "type": "Internship",
+  "company": "ICU medical",
+  "salary": 9,
+  "__v": 0,
+  "status": "placed"
+}]

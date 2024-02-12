@@ -1,0 +1,6 @@
+_id,studentname,CGPA,arrear,placement,status,type,company,CTC,salary,__v
+6560aca2bf4fe00074293742,Uvan Shankar,7.41,0,1,placed,internship,ICU medical,9,,
+6560ace558aca44a322036b2,sanjay,3,0,1,not placed,internship,google,11,,
+65630b4570bf18ea5fe20e43,Uvan Shankar,7.41,0,1,placed,Internship,ICU medical,,9,0
+65630c6b70bf18ea5fe20e46,Uvan Shankar,7.41,0,1,not placed,Internship,ICU medical,,9,0
+65630cb6bb406fa982424d67,Uvan Shankar,7.41,0,1,placed,Internship,ICU medical,,9,0
