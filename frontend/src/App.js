@@ -15,7 +15,7 @@ function App() {
 
   const handleNavbarClick = (pagename) => {
     if (pagename === "Dashboard") {
-      setpage(<Dashboard />);
+      setpage(<Dashboard/>);
       setstyle1("nav-item nav-link active");
       setstyle2("nav-item nav-link");
     } else if (pagename === "Update") {
